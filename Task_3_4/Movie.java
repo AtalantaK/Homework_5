@@ -1,3 +1,5 @@
+package Task_3_4;
+
 public class Movie {
     private String nameMovie;
     private double rateMovie;

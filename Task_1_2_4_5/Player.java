@@ -1,3 +1,5 @@
+package Task_1_2_4_5;
+
 public class Player {
     private int idPlayer;
     private String nicknamePlayer;
@@ -25,8 +27,8 @@ public class Player {
     public String toString() {
         String flag = "Нет";
         if (isOnlinePlayer) flag = "Да";
-        return "ID игрока: " + idPlayer + "\n" +
-                "Nickname игрока: " + nicknamePlayer + "\n" +
+        return "ID игрока: " + idPlayer + ", " +
+                "Nickname игрока: " + nicknamePlayer + ", " +
                 "Игрок онлайн: " + flag;
     }
 
