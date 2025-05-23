@@ -21,23 +21,26 @@ public class Player {
         return isOnlinePlayer;
     }
 
+    @Override
     public String toString() {
-        String flag;
+        String flag = "Нет";
         if (isOnlinePlayer) flag = "Да";
-        else flag = "Нет";
         return "ID игрока: " + idPlayer + "\n" +
                 "Nickname игрока: " + nicknamePlayer + "\n" +
                 "Игрок онлайн: " + flag;
     }
 
-    // Два игрока равны если у них одинаковые nickName
-    public boolean equals(Player player) {
-        return this.nicknamePlayer.equals(player.nicknamePlayer);
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Player obj = (Player) o;
+        return (idPlayer == obj.idPlayer && nicknamePlayer.equals(obj.nicknamePlayer) && isOnlinePlayer == obj.isOnlinePlayer);
     }
 
+    @Override
     public int hashCode() {
-        //todo: написать код
-        return 0;
+        return Integer.hashCode(idPlayer);
     }
 
 }

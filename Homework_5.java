@@ -8,15 +8,14 @@ public class Homework_5 {
         //Task 1
         Player player1 = new Player(10001, true, "Jack");
         Player player2 = new Player(10002, false, "Gamer1");
-        Player player3 = new Player(10003, false, "Jack");
+        Player player3 = new Player(10001, true, "Jack");
 
-        System.out.println(player1.toString());
+        System.out.println("Игрок 1 равен Игроку 2 через \"==\"? " + (player1 == player2));
+        System.out.println("Игрок 1 равен Игроку 2 через equals()? " + player1.equals(player2));
 
-        System.out.println(player1 == player2);
-        System.out.println(player1.equals(player2));
+        System.out.println("Игрок 1 равен Игроку 3 через \"==\"? " + (player1 == player3));
+        System.out.println("Игрок 1 равен Игроку 3 через equals()? " + player1.equals(player3));
 
-        System.out.println(player1 == player3);
-        System.out.println(player1.equals(player3));
 
         // Task 2
 //        List<String> listTask2 = new ArrayList<>();
