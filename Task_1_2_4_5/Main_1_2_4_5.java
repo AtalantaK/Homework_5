@@ -1,25 +1,22 @@
 package Task_1_2_4_5;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Main_1_2_4_5 {
 
     public static void main(String[] args) {
 
         //Task 1
-        Task_1_2_4_5.Player player1 = new Task_1_2_4_5.Player(10001, true, "Nick1");
-        Task_1_2_4_5.Player player2 = new Task_1_2_4_5.Player(10002, false, "Nick2");
-        Task_1_2_4_5.Player player3 = new Task_1_2_4_5.Player(10001, true, "Nick1");
+        Player player1 = new Player(10001, true, "Nick1");
+        Player player2 = new Player(10002, false, "Nick2");
+        Player player3 = new Player(10001, true, "Nick1");
 
-        System.out.println("Игрок 1 равен Игроку 2 через \"==\"? " + (player1 == player2));
-        System.out.println("Игрок 1 равен Игроку 2 через equals()? " + player1.equals(player2));
-
-        System.out.println("Игрок 1 равен Игроку 3 через \"==\"? " + (player1 == player3));
-        System.out.println("Игрок 1 равен Игроку 3 через equals()? " + player1.equals(player3));
-        System.out.println();
+//        System.out.println("Игрок 1 равен Игроку 2 через \"==\"? " + (player1 == player2));
+//        System.out.println("Игрок 1 равен Игроку 2 через equals()? " + player1.equals(player2));
+//
+//        System.out.println("Игрок 1 равен Игроку 3 через \"==\"? " + (player1 == player3));
+//        System.out.println("Игрок 1 равен Игроку 3 через equals()? " + player1.equals(player3));
+//        System.out.println();
 
 
         // Task 2
@@ -30,10 +27,10 @@ public class Main_1_2_4_5 {
         listTask2.add("Покормить кота");
         listTask2.add("Встретиться с парнем");
 
-        for (String s : listTask2) {
-            System.out.println("Задача " + (listTask2.indexOf(s) + 1) + ": " + s);
-        }
-        System.out.println();
+//        for (String s : listTask2) {
+//            System.out.println("Задача " + (listTask2.indexOf(s) + 1) + ": " + s);
+//        }
+//        System.out.println();
 
         //Task 5
 
@@ -52,11 +49,33 @@ public class Main_1_2_4_5 {
 
         players.add(new Player(10001, true, "Nick1"));
 
-        for (Player player : players) {
-            System.out.println(player.toString());
-        }
+//        for (Player player : players) {
+//            System.out.println(player.toString());
+//        }
 
         //Task 6
+        Map<Player, Integer> points = new HashMap<>();
+
+        points.put(new Player(10001, true, "Nick1"), 0);
+        points.put(new Player(10002, false, "Nick2"), 0);
+        points.put(new Player(10003, false, "Nick3"), 0);
+        points.put(new Player(10004, true, "Nick4"), 10);
+        points.put(new Player(10005, false, "Nick5"), 0);
+        points.put(new Player(10006, true, "Nick6"), 0);
+        points.put(new Player(10007, false, "Nick7"), 12);
+        points.put(new Player(10008, false, "Nick8"), 11);
+        points.put(new Player(10009, false, "Nick9"), 13);
+        points.put(new Player(10010, true, "Nick10"), 5);
+
+//        int[] arrayPoints = new int[points.size()];
+
+//        for (int i = 0; i < points.size(); i++) {
+//            arrayPoints[i] = points.get(points.keySet());
+//        }
+
+        for (Player player:points.keySet()){
+            System.out.println(points.get(player));
+        }
 
     }
 }
