@@ -11,12 +11,12 @@ public class Main_1_2_4_5 {
         Player player2 = new Player(10002, false, "Nick2");
         Player player3 = new Player(10001, true, "Nick1");
 
-//        System.out.println("Игрок 1 равен Игроку 2 через \"==\"? " + (player1 == player2));
-//        System.out.println("Игрок 1 равен Игроку 2 через equals()? " + player1.equals(player2));
-//
-//        System.out.println("Игрок 1 равен Игроку 3 через \"==\"? " + (player1 == player3));
-//        System.out.println("Игрок 1 равен Игроку 3 через equals()? " + player1.equals(player3));
-//        System.out.println();
+        System.out.println("Игрок 1 равен Игроку 2 через \"==\"? " + (player1 == player2));
+        System.out.println("Игрок 1 равен Игроку 2 через equals()? " + player1.equals(player2));
+
+        System.out.println("Игрок 1 равен Игроку 3 через \"==\"? " + (player1 == player3));
+        System.out.println("Игрок 1 равен Игроку 3 через equals()? " + player1.equals(player3));
+        System.out.println();
 
 
         // Task 2
@@ -27,10 +27,10 @@ public class Main_1_2_4_5 {
         listTask2.add("Покормить кота");
         listTask2.add("Встретиться с парнем");
 
-//        for (String s : listTask2) {
-//            System.out.println("Задача " + (listTask2.indexOf(s) + 1) + ": " + s);
-//        }
-//        System.out.println();
+        for (String s : listTask2) {
+            System.out.println("Задача " + (listTask2.indexOf(s) + 1) + ": " + s);
+        }
+        System.out.println();
 
         //Task 5
 
@@ -49,9 +49,10 @@ public class Main_1_2_4_5 {
 
         players.add(new Player(10001, true, "Nick1"));
 
-//        for (Player player : players) {
-//            System.out.println(player.toString());
-//        }
+        for (Player player : players) {
+            System.out.println(player.toString());
+        }
+        System.out.println();
 
         //Task 6
         Map<Player, Integer> points = new HashMap<>();
@@ -74,7 +75,8 @@ public class Main_1_2_4_5 {
 
         System.out.println("3 самых лучших игрока турнира:");
         for (int i = 0; i < 3; i++) {
-            System.out.println("\t" + (i + 1) + " место: " + sortedPlayers.get(i).getKey() + ". Количество очков: " + sortedPlayers.get(i).getValue());
+            System.out.println("\t" + (i + 1) + " место: " + sortedPlayers.get(i).getKey() +
+                    ". Количество очков: " + sortedPlayers.get(i).getValue());
         }
     }
 }
