@@ -1,5 +1,7 @@
 package Task_1_2_4_5;
 
+import java.util.Objects;
+
 public class Player {
     private int idPlayer;
     private String nicknamePlayer;
@@ -42,7 +44,7 @@ public class Player {
 
     @Override
     public int hashCode() {
-        return Integer.hashCode(idPlayer);
+        return Objects.hash(idPlayer);
     }
 
 }
