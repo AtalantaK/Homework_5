@@ -56,22 +56,17 @@ public class Main_1_2_4_5 {
         //Task 6
         Map<Player, Integer> points = new HashMap<>();
 
+        //Заполняем турнирную таблицу
         for (int i = 0; i < 10; i++) {
             points.put(new Player((10000 + i), true, "Nick" + (i + 1)), 0);
         }
 
+        //Меняем значения некоторым игрокам
         points.replace(new Player((10000 + 4), true, "Nick4"), 10);
-
-//        points.put(new Player(10001, true, "Nick1"), 0);
-//        points.put(new Player(10002, false, "Nick2"), 0);
-//        points.put(new Player(10003, false, "Nick3"), 0);
-//        points.put(new Player(10004, true, "Nick4"), 10);
-//        points.put(new Player(10005, false, "Nick5"), 0);
-//        points.put(new Player(10006, true, "Nick6"), 0);
-//        points.put(new Player(10007, false, "Nick7"), 12);
-//        points.put(new Player(10008, true, "Nick8"), 11);
-//        points.put(new Player(10009, true, "Nick9"), 13);
-//        points.put(new Player(10010, true, "Nick10"), 5);
+        points.replace(new Player((10000 + 7), true, "Nick7"), 12);
+        points.replace(new Player((10000 + 8), true, "Nick8"), 11);
+        points.replace(new Player((10000 + 9), true, "Nick9"), 13);
+        points.replace(new Player((10000 + 10), true, "Nick10"), 5);
 
         //Сортируем игроков по очкам по убыванию
         List<Map.Entry<Player, Integer>> sortedPlayers = new ArrayList<>(points.entrySet());

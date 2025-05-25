@@ -39,7 +39,8 @@ public class Player {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Player obj = (Player) o;
-        return (idPlayer == obj.idPlayer && nicknamePlayer.equals(obj.nicknamePlayer) && isOnlinePlayer == obj.isOnlinePlayer);
+        //return (idPlayer == obj.idPlayer && nicknamePlayer.equals(obj.nicknamePlayer) && isOnlinePlayer == obj.isOnlinePlayer)
+        return (idPlayer == obj.idPlayer);
     }
 
     @Override
